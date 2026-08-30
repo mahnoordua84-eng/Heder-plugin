@@ -1,0 +1,121 @@
+/* Nexora Advanced Header - Admin Styles */
+.nexora-admin-wrap { max-width: 1200px; margin-top: 20px; }
+.nexora-admin-title { font-size: 26px; font-weight: 700; margin-bottom: 20px; }
+
+.nexora-admin-layout { display: flex; gap: 20px; min-height: 600px; }
+
+.nexora-admin-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 0;
+    height: fit-content;
+    position: sticky;
+    top: 32px;
+}
+.nexora-admin-sidebar ul { list-style: none; margin: 0; padding: 0; }
+.nexora-admin-sidebar li { margin: 0; }
+.nexora-admin-sidebar a {
+    display: block;
+    padding: 12px 18px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    border-left: 3px solid transparent;
+}
+.nexora-admin-sidebar a:hover { background: #f9fafb; color: #6d28d9; }
+.nexora-admin-sidebar a.active {
+    background: #f5f3ff;
+    color: #6d28d9;
+    border-left-color: #6d28d9;
+    font-weight: 600;
+}
+
+.nexora-admin-content { flex: 1; min-width: 0; }
+
+.nexora-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.nexora-card h2 { margin-top: 0; font-size: 20px; font-weight: 700; padding-bottom: 16px; border-bottom: 1px solid #f3f4f6; }
+.nexora-card h3 { font-size: 16px; font-weight: 600; margin-top: 28px; margin-bottom: 12px; color: #1f2937; }
+
+.nexora-subsection { margin-top: 24px; padding-top: 20px; border-top: 1px solid #f3f4f6; }
+
+.nexora-feature-list { list-style: disc; padding-left: 20px; }
+.nexora-feature-list li { margin: 6px 0; }
+
+/* Toggle Switch */
+.nexora-switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+.nexora-switch input { opacity: 0; width: 0; height: 0; }
+.nexora-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+.nexora-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+.nexora-switch input:checked + .nexora-slider { background: #6d28d9; }
+.nexora-switch input:checked + .nexora-slider::before { transform: translateX(20px); }
+
+/* Checkbox rows */
+.nexora-checkbox-row { display: inline-block; margin: 4px 16px 4px 0; }
+
+/* Media upload */
+.nexora-media-upload { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.nexora-media-preview {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f9fafb;
+}
+.nexora-media-preview img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.nexora-media-preview:empty::before { content: 'No image'; font-size: 11px; color: #9ca3af; }
+
+/* Color picker */
+.nexora-color-picker { width: 80px !important; height: 32px !important; }
+
+.wp-picker-container .wp-color-result.button { border-radius: 6px; }
+
+/* Form table adjustments */
+.nexora-card .form-table th { width: 200px; padding: 16px 10px 16px 0; }
+.nexora-card .form-table td { padding: 16px 10px; }
+.nexora-card select,
+.nexora-card input[type="number"],
+.nexora-card input[type="text"],
+.nexora-card input[type="url"] { border-radius: 6px; }
+
+@media (max-width: 782px) {
+    .nexora-admin-layout { flex-direction: column; }
+    .nexora-admin-sidebar { width: 100%; position: static; }
+    .nexora-admin-sidebar ul { display: flex; flex-wrap: wrap; gap: 4px; }
+    .nexora-admin-sidebar li { flex: 1 1 auto; }
+    .nexora-admin-sidebar a { padding: 8px 12px; border-left: none; border-bottom: 3px solid transparent; }
+    .nexora-admin-sidebar a.active { border-bottom-color: #6d28d9; border-left: none; }
+    .nexora-card { padding: 16px; }
+    .nexora-card .form-table th { width: auto; }
+}

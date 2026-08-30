@@ -1,0 +1,34 @@
+/* Nexora Advanced Header - Responsive */
+@media (max-width: 1024px) {
+    .nexora-header-inner { padding: 0 16px; }
+    .nexora-header-right { gap: 12px; }
+    .nexora-menu { gap: 16px; }
+    .nexora-social { display: none; }
+}
+
+@media (max-width: 900px) {
+    .nexora-header-center { display: none; }
+    .nexora-hamburger { display: flex; }
+    .nexora-header-right .nexora-search { display: none; }
+    .nexora-header-right .nexora-account-link { display: none; }
+    .nexora-header-right .nexora-cta { display: none; }
+    .nexora-header-right .nexora-cart { display: flex; }
+    .nexora-mega { min-width: auto; }
+}
+
+@media (max-width: 600px) {
+    .nexora-header-inner { padding: 0 12px; }
+    .nexora-logo img { max-height: 36px; }
+    .nexora-logo-text { font-size: 18px; }
+    .nexora-header-right { gap: 8px; }
+    .nexora-bottom-line { height: 32px; }
+    .nexora-bottom-item { font-size: 12px; }
+    .nexora-mini-cart { width: 100vw; right: -100vw; }
+    .nexora-mini-cart.open { right: 0; }
+    .nexora-announcement { font-size: 12px; }
+}
+
+@media (min-width: 901px) {
+    .nexora-mobile-overlay,
+    .nexora-mobile-menu { display: none; }
+}

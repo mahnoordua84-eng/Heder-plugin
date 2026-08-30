@@ -1,0 +1,45 @@
+/* Nexora Advanced Header - RTL */
+html[dir="rtl"] .nexora-header-inner { direction: rtl; }
+html[dir="rtl"] .nexora-header-right { flex-direction: row-reverse; }
+html[dir="rtl"] .nexora-header-left { flex-direction: row-reverse; }
+
+html[dir="rtl"] .nexora-menu { direction: rtl; }
+html[dir="rtl"] .nexora-submenu { left: auto; right: 0; }
+html[dir="rtl"] .nexora-submenu .nexora-submenu { left: auto; right: 100%; }
+
+html[dir="rtl"] .nexora-mega { direction: rtl; }
+
+html[dir="rtl"] .nexora-search-form { right: auto; left: 0; }
+
+html[dir="rtl"] .nexora-cart-count { right: auto; left: 0; }
+
+html[dir="rtl"] .nexora-social { direction: rtl; }
+
+html[dir="rtl"] .nexora-announcement-track { animation-direction: reverse; }
+html[dir="rtl"] .nexora-bottom-track { animation-direction: reverse; }
+
+html[dir="rtl"] .nexora-announcement-content { padding: 0 24px; }
+
+html[dir="rtl"] .nexora-mini-cart { right: auto; left: -420px; }
+html[dir="rtl"] .nexora-mini-cart.open { left: 0; right: auto; }
+html[dir="rtl"] .nexora-mini-cart { box-shadow: 8px 0 30px rgba(0,0,0,0.15); }
+
+html[dir="rtl"] .nexora-mobile-left { left: -340px; right: auto; }
+html[dir="rtl"] .nexora-mobile-left.open { transform: translateX(340px); }
+html[dir="rtl"] .nexora-mobile-right { right: -340px; left: auto; }
+html[dir="rtl"] .nexora-mobile-right.open { transform: translateX(-340px); }
+
+html[dir="rtl"] .nexora-mobile-arrow { right: auto; left: 0; }
+html[dir="rtl"] .nexora-mobile-submenu { padding: 0 16px 0 0; }
+
+html[dir="rtl"] .nexora-logo img { margin-right: 0; margin-left: var(--nexora-menu-spacing); }
+
+html[dir="rtl"] .nexora-active > .nexora-menu-link::before { left: 14px; right: 14px; }
+
+@keyframes nexoraMarqueeRTL {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+html[dir="rtl"] .nexora-announcement-track { animation-name: nexoraMarqueeRTL; }
+html[dir="rtl"] .nexora-bottom-track { animation-name: nexoraMarqueeRTL; }
